@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card mt-2">
+    <div class="card-body">
+      <h2>รายชื่อสมาชิกในวง BNK48</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ชื่อ</th>
+            <th>แก้ไข</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let member of members">
+            <td>{{ member.name }}</td>
+            <td>
+              <a [routerLink]="['/admin/edit', member._id]">แก้ไข</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
